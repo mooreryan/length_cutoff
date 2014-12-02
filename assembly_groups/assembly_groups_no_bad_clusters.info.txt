@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:weka.clusterers.EM -I 100 -N -1 -M 1.0E-6 -S 100
+Relation:     assembly_groups_no_bad
+Instances:    88
+Attributes:   4
+              Coverage
+              N50
+              TotalContigs
+Ignored:
+              Name
+Test mode:split 66% train, remainder test
+
+=== Model and evaluation on training set ===
+
+
+EM
+==
+
+Number of clusters selected by cross validation: 3
+
+
+                   Cluster
+Attribute                0           1           2
+                    (0.47)       (0.4)      (0.14)
+===================================================
+Coverage
+  mean               0.9447      0.9805      0.9794
+  std. dev.          0.0034      0.0053      0.0018
+
+N50
+  mean          131735.7073  67515.7714  10554.5833
+  std. dev.       9347.0878   19335.563     85.8365
+
+TotalContigs
+  mean              83.1463    167.7143    850.6667
+  std. dev.         10.0014     51.3089      7.3068
+
+
+
+Time taken to build model (full training data) : 0.19 seconds
+
+=== Model and evaluation on test split ===
+
+EM
+==
+
+Number of clusters selected by cross validation: 3
+
+
+                   Cluster
+Attribute                0           1           2
+                    (0.31)       (0.1)      (0.59)
+===================================================
+Coverage
+  mean               0.9807      0.9798      0.9449
+  std. dev.          0.0046      0.0019      0.0036
+
+N50
+  mean           65412.2778  10579.8333 131377.6765
+  std. dev.      19811.8917    115.9388   9091.7802
+
+TotalContigs
+  mean                  174    849.3333     83.7941
+  std. dev.         53.6749      8.6731      10.275
+
+
+
+Time taken to build model (percentage split) : 0.14 seconds
+
+Clustered Instances
+
+0      17 ( 57%)
+1       6 ( 20%)
+2       7 ( 23%)
+
+
+Log likelihood: -11.74665
+
