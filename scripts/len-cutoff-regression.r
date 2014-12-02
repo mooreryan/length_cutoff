@@ -1,7 +1,7 @@
 library('bear')
 library('hash')
 
-fname <- '/Users/ryanmoore/projects/length_cutoff/info/EColik12CompleteGenome.length_cutoff_summary.no-errors.no-zeros_with-confidence-levels.txt'
+fname <- '/Users/ryanmoore/projects/length_cutoff/info/EColik12CompleteGenome.length_cutoff_summary.no-errors.no-zeros_with-confidence-levels.txt'c
 
 dat <- read.table(fname, header=T, sep=' ')
 
