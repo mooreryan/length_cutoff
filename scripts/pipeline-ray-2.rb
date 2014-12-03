@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# DONT USE THIS ONE
+
 # updated 2014-10-29: add confidence interval step
 # updated 2014-10-30: add kmer info to recruitment output fnames, add time stamps
 # updated 2014-10-30: update call to confidence-intervals.r
