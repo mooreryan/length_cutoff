@@ -323,7 +323,7 @@ in_sam = aligned_reads_sam
 
 converter = File.join(opts[:bin], 'samtools.sh')
 
-cmd = "#{converter} #{in_sam}"
+cmd = "bash #{converter} #{in_sam}"
 
 run_it!(cmd)
 
@@ -341,7 +341,7 @@ $stderr.puts "\nMade bam and index in #{elapsed_time(t)} minutes."
 
 t = Time.now
 
-simple_info = '/home/moorer/public/artificial_metagenomes/scripts/recruitment/recruitment_info_simple-0.0.1.jar'
+simple_info = File.join(opts[:bin], 'recruitment_info_simple-0.0.1.jar')
 
 simple_info_dir = File.join(recruitment_dir, 'coverage')
 unless File.exists?(simple_info_dir)
@@ -369,7 +369,7 @@ $stderr.puts "\nCalculated coverage in #{elapsed_time(t)} minutes."
 
 t = Time.now
 
-confidence_intervals = '/home/moorer/downloads/cone-jawns/new_stuff/scripts/confidence-intervals.r'
+confidence_intervals = File.join(opts[:bin], 'confidence-intervals.r')
 
 simple_recruitment_info_fname_parsed =
   parse_fname(simple_recruitment_info_fname)
