@@ -18,7 +18,7 @@ FastaFile.open(in_f, 'r').each_record do |header, sequence|
   num = header.split("|").first.to_i
 
   if pick_these.include?(num)
-    puts [header, sequence].join("\n")
+    puts ">#{header}\n#{sequence}"
     $stderr.print "#{status} "
     status += 1
   end
