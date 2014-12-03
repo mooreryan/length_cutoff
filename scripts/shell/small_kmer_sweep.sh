@@ -1,5 +1,7 @@
 #!/bin/bash
 
+module load mpi/mpich-x86_64
+
 fasta=$1
 outdir=/home/moorer/silly-jawn/output
 
@@ -14,7 +16,7 @@ do time ruby $working_dir/scripts/pipeline-ray.rb -f \
     -o $outdir \
     -b $working_dir/scripts/ \
     -t 20 -k $kmer --no-kmer-sweep \
-    1> $outdir/pipeline-ray.$length.$coverage.$kmer.out.txt \
-    2> $outdir/pipeline-ray.$length.$coverage.$kmer.err.txt;
+    1> $outdir/pipeline-ray.$fasta.$length.$coverage.$kmer.out.txt \
+    2> $outdir/pipeline-ray.$fasta.$length.$coverage.$kmer.err.txt;
 done;
 
