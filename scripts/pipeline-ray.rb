@@ -321,7 +321,7 @@ t = Time.now
 
 in_sam = aligned_reads_sam
 
-converter = '/home/moorer/public/artificial_metagenomes/scripts/utilities/samtools.sh'
+converter = File.join(opts[:bin], 'samtools.sh')
 
 cmd = "#{converter} #{in_sam}"
 
