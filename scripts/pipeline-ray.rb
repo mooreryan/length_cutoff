@@ -3,6 +3,7 @@
 # updated 2014-10-29: add confidence interval step
 # updated 2014-10-30: add kmer info to recruitment output fnames, add time stamps
 # updated 2014-10-30: update call to confidence-intervals.r
+# updated 2014-12-03: change defaults and kmer sweep values
 
 Signal.trap("PIPE", "EXIT")
 
@@ -53,7 +54,7 @@ Notes:
   EOS
   opt(:fasta, 'Fasta file with genome to start with', type: :string)
   opt(:coverage, 'The mean coverage you want.', type: :int,
-      default: 50)
+      default: 25)
   opt(:read_len, 'The length of reads.', type: :int,
       default: 250)
 
@@ -210,7 +211,8 @@ in_threads = opts[:threads]
 
 
 if opts[:kmer_sweep]
-  (21..201).step(10).each do |kmer|
+  # (21..201).step(10).each do |kmer|
+  [41, 81, 141, 201].each do |kmer|
     # CLI options
     in_output =
       File.join(assembly_dir,
