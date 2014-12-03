@@ -8,7 +8,7 @@ coverage=25
 
 working_dir=/home/moorer/projects/length_cutoff
 
-do for kmer in {41,81,141,201};
+for kmer in {41,81,141,201};
 do time ruby $working_dir/scripts/pipeline-ray.rb -f \
     $fasta \
     -o $outdir \
