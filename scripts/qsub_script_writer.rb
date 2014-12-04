@@ -15,8 +15,8 @@ fnames.each.with_index do |fname, idx|
     File.open("#{idx}_#{kmer}_ray_submitter.qs", 'w') do |f|
       s = "#!/bin/bash
 
-#PBS -N ray_len_cut_#{date}
-#PBS -l walltime=4:00:00,nodes=1:ppn=20,cput=80:00:00
+#PBS -N ray_len_cut_#{date}_#{idx}_#{kmer}
+#PBS -l walltime=8:00:00,nodes=1:ppn=10,cput=80:00:00
 #PBS -d /home/moorer/silly-jawn/torque
 #PBS -e /home/moorer/silly-jawn/torque
 #PBS -o /home/moorer/silly-jawn/torque
