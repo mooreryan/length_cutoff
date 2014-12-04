@@ -18,8 +18,8 @@ fnames.each.with_index do |fname, idx|
 #PBS -N ray_len_cut_#{date}_#{idx}_#{kmer}
 #PBS -l walltime=8:00:00,nodes=1:ppn=10,cput=80:00:00
 #PBS -d /home/moorer/silly-jawn/torque
-#PBS -e /home/moorer/silly-jawn/torque
-#PBS -o /home/moorer/silly-jawn/torque
+#PBS -e /home/moorer/silly-jawn/torque/torque_output
+#PBS -o /home/moorer/silly-jawn/torque/torque_output
 
 ## code to run here
 
