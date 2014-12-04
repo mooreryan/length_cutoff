@@ -13,8 +13,7 @@ outdir = '/home/moorer/silly-jawn/torque'
 fnames.each.with_index do |fname, idx|
   kmers.each do |kmer|
     File.open("#{idx}_#{kmer}_ray_submitter.qs", 'w') do |f|
-      s <<-EOS
-#!/bin/bash
+      s = "#!/bin/bash
 
 #PBS -N ray_len_cut_#{date}
 #PBS -l walltime=4:00:00,nodes=1:ppn=20,cput=80:00:00
@@ -33,7 +32,7 @@ time ruby /home/moorer/projects/length_cutoff/scripts/shell/run_pipeline.rb #{fn
 
 date
 echo 'done!'
-EOS
+"
     end
   end
 end
