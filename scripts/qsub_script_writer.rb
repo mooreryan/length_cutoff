@@ -33,6 +33,7 @@ time ruby /home/moorer/projects/length_cutoff/scripts/shell/run_pipeline.rb #{fn
 date
 echo 'done!'
 "
+    f.puts s
     end
   end
 end
