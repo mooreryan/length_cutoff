@@ -20,4 +20,4 @@ working_dir = '/home/moorer/projects/length_cutoff'
 
 outbase = "#{outdir}/pipeline_ray.#{fasta_f[:base]}.#{length}_length.#{coverage}_coverage.#{kmer}_kmer"
 
-`time ruby #{working_dir}/scripts/pipeline-ray.rb -f #{fasta} -o #{outdir} -b #{working_dir}/scripts -t 20 -k #{kmer} --no-kmer-sweep 1> #{outbase}.out.txt 2> #{outbase}.err.txt`
+`time ruby #{working_dir}/scripts/pipeline-ray.rb -f #{fasta} -o #{outdir} -b #{working_dir}/scripts -t 10 -k #{kmer} --no-kmer-sweep 1> #{outbase}.out.txt 2> #{outbase}.err.txt`
