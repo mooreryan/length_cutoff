@@ -145,7 +145,7 @@ make_even_reads = File.join(opts[:bin], 'make-even-reads.rb')
 working_dir = opts[:outdir]
 
 
-if !File.exists?(even_reads_fname)
+if true #!File.exists?(even_reads_fname)
   # CLI options
   script = make_even_reads
   in_fasta = opts[:fasta]
