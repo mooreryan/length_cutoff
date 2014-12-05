@@ -1,4 +1,4 @@
-date = '2014_12_05_eric'
+date = '2014_12_05'
 fastas = '/home/moorer/silly-jawn/fastas/all_fastas.txt'
 kmers = [41,81,141,201]
 

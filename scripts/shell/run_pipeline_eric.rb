@@ -11,7 +11,7 @@ fasta_f = parse_fname(fasta)
 
 kmer = ARGV[1]
 
-outdir = '/home/moorer/silly-jawn/output'
+outdir = '/home/prasanj/silly-jawn/output'
 
 length = 250
 coverage = 10
