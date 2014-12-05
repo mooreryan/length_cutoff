@@ -103,8 +103,6 @@ def run_it!(cmd)
   begin
     $stderr.puts "\nRunning: #{cmd}"
     cmd_outerr = Shell.execute!(cmd)
-    $stderr.puts cmd_outerr.stdout
-    $stderr.puts cmd_outerr.stderr
   rescue RuntimeError => e
     # print stderr if bad exit status
     abort(e.message)
