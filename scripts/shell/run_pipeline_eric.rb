@@ -16,7 +16,7 @@ outdir = '/home/prasanj/silly-jawn/output'
 length = 250
 coverage = 10
 
-working_dir = '/home/moorer/projects/length_cutoff'
+working_dir = '/home/prasanj/projects/length_cutoff'
 
 outbase = "#{outdir}/pipeline_ray.#{fasta_f[:base]}.#{length}_length.#{coverage}_coverage.#{kmer}_kmer"
 

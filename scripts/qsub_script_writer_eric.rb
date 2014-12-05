@@ -8,7 +8,7 @@ File.open(fastas, 'r').each_line do |line|
   fnames << "#{dir}/#{line.chomp}"
 end
 
-outdir = '/home/moorer/silly-jawn/torque/eric'
+outdir = '/home/prasanj/silly-jawn/torque/'
 
 fnames.each.with_index do |fname, idx|
   kmers.each do |kmer|
@@ -17,9 +17,9 @@ fnames.each.with_index do |fname, idx|
 
 #PBS -N ray_len_cut_#{date}_#{idx}_#{kmer}_eric
 #PBS -l walltime=10:00:00,nodes=1:ppn=4,cput=40:00:00
-#PBS -d /home/moorer/silly-jawn/torque/
-#PBS -e /home/moorer/silly-jawn/torque/torque_output
-#PBS -o /home/moorer/silly-jawn/torque/torque_output
+#PBS -d /home/prasanj/silly-jawn/torque/
+#PBS -e /home/prasanj/silly-jawn/torque/torque_output
+#PBS -o /home/prasanj/silly-jawn/torque/torque_output
 
 ## code to run here
 
@@ -28,7 +28,7 @@ date
 
 module load mpi/mpich-x86_64
 
-time ruby /home/moorer/projects/length_cutoff/scripts/shell/run_pipeline_eric.rb #{fname} #{kmer}
+time ruby /home/prasanj/projects/length_cutoff/scripts/shell/run_pipeline_eric.rb #{fname} #{kmer}
 
 date
 echo 'done!'
