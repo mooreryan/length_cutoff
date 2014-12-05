@@ -16,10 +16,10 @@ fnames.each.with_index do |fname, idx|
       s = "#!/bin/bash
 
 #PBS -N ray_len_cut_#{date}_#{idx}_#{kmer}_eric
-#PBS -l walltime=8:00:00,nodes=1:ppn=5,cput=40:00:00
-#PBS -d /home/moorer/silly-jawn/torque/eric
-#PBS -e /home/moorer/silly-jawn/torque/eric/torque_output
-#PBS -o /home/moorer/silly-jawn/torque/eric/torque_output
+#PBS -l walltime=10:00:00,nodes=1:ppn=4,cput=40:00:00
+#PBS -d /home/moorer/silly-jawn/torque/
+#PBS -e /home/moorer/silly-jawn/torque/torque_output
+#PBS -o /home/moorer/silly-jawn/torque/torque_output
 
 ## code to run here
 
