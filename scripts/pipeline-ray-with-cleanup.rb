@@ -134,8 +134,9 @@ end
 
 # file names
 fasta_f = parse_fname(opts[:fasta])
+rand_num = 10.times.map {rand(9)}.join
 out_fname = "#{fasta_f[:base]}.even_reads_#{opts[:coverage]}x_" +
-  "#{opts[:read_len]}bp.fa"
+  "#{opts[:read_len]}bp.#{rand_num}.fa"
 even_reads_fname = File.join(reads_dir, out_fname)
 even_reads_fname_parsed = parse_fname(even_reads_fname)
 even_reads_fastq_fname = File.join(reads_dir,
